@@ -1,14 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 
-import Provider, { createStore } from '../../src/redux/Provider';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Provider, { configureStore } from '../../src/redux/Provider';
 import reducers from './redux/reducers';
 import App from './App';
 
-export const store = createStore(reducers);
+export const store = configureStore({
+    reducer: reducers
+});
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Router>
+            <App />
+        </Router>
     </Provider>
     , document.getElementById('demo'));

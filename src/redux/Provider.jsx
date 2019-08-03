@@ -1,14 +1,26 @@
 import React from 'react';
 
-import { applyMiddleware, createStore as reduxCreateStore, bindActionCreators } from 'redux'
-import { Provider, connect as reduxConnect } from 'react-redux'
-import promise from 'redux-promise'
-import multi from 'redux-multi'
-import thunk from 'redux-thunk'
+import { bindActionCreators } from 'redux';
+import { Provider, connect as reduxConnect } from 'react-redux';
+import { configureStore as reduxConfigureStore, getDefaultMiddleware } from 'redux-starter-kit';
+import { i18nReducer } from '@seudev/x-i18n';
+import promise from 'redux-promise';
+import multi from 'redux-multi';
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+export const builtInReducers = {
+    i18n: i18nReducer,
+};
 
-export const createStore = reducers => applyMiddleware(thunk, multi, promise)(reduxCreateStore)(reducers, devTools);
+export const configureStore = config => {
+    return reduxConfigureStore({
+        ...config,
+        reducer: {
+            ...builtInReducers,
+            ...config.reducer
+        },
+        middleware: [...getDefaultMiddleware(), promise, multi],
+    });
+};
 
 export const connect = (stateKey, actions, component) => {
     const mapStateToProps = state => {
