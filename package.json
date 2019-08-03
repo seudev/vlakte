@@ -1,0 +1,50 @@
+{
+  "name": "@seudev/vlakte",
+  "version": "0.0.1",
+  "description": "A React framework to simplify your app.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component --copy-files",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
+  "dependencies": {
+    "@seudev/x-i18n": "0.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "nwb": "0.23.x",
+    "redux-devtools": "^3.5.0"
+  },
+  "author": "Thomás Sousa Silva <thomassousa.dev>",
+  "homepage": "http://vlakte.seudev.com",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seudev/vlakte.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seudev/vlakte/issues"
+  },
+  "keywords": [
+    "components",
+    "react",
+    "redux",
+    "Seudev"
+  ]
+}
