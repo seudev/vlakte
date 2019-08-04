@@ -5,6 +5,8 @@ import { i18nActions, Message } from '@seudev/x-i18n';
 import { Helmet } from "react-helmet";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import en from './i18n/en';
+import DrawerButton from '../../src/components/drawer/DrawerButton';
+import AppDrawer from './components/AppDrawer';
 
 class App extends Component {
 
@@ -30,7 +32,11 @@ class App extends Component {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
                 </Helmet>
                 <CssBaseline />
-                <Message id="brand" />
+                <main>
+                    <DrawerButton />
+                    <Message id="brand" />
+                    <AppDrawer />
+                </main>
             </React.Fragment>
         );
     }

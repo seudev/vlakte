@@ -6,22 +6,11 @@ import { Provider, connect as reduxConnect } from 'react-redux';
 import { configureStore as reduxConfigureStore, getDefaultMiddleware, createAction as reduxCreateAction } from 'redux-starter-kit';
 import promise from 'redux-promise';
 import multi from 'redux-multi';
-import { i18nReducer } from '@seudev/x-i18n';
-import drawerReducer from './components/drawer/drawerReducer';
-
-export const builtInReducers = {
-    i18n: i18nReducer,
-    drawer: drawerReducer
-};
 
 export const configureStore = config => {
     return reduxConfigureStore({
-        ...config,
-        reducer: {
-            ...builtInReducers,
-            ...config.reducer
-        },
         middleware: [...getDefaultMiddleware(), promise, multi],
+        ...config,
     });
 };
 
@@ -41,7 +30,19 @@ export const connect = (stateKey, actions, component) => {
     return reduxConnect(mapStateToProps, mapDispatchToProps)(component);
 };
 
-export const createAction = type => reduxCreateAction(`${projectName}/${type}`);
+export const createAction = (type, handler) => {
+    const finalType = `${projectName}/${type}`;
+    const action = reduxCreateAction(finalType);
+    if (!handler) {
+        return action;
+    }
+
+    const handlerWrapper = function() {
+        return handler.apply(this, [action, ...arguments]);
+    };
+    handlerWrapper.toString = () => finalType;
+    return handlerWrapper;
+};
 
 export default props => (
     <Provider store={props.store}>
