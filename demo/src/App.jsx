@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { connect } from '../../src/redux/Provider';
+import { connect } from '../../src/Redux';
 import { i18nActions, Message } from '@seudev/x-i18n';
 import { Helmet } from "react-helmet";
 import CssBaseline from '@material-ui/core/CssBaseline';
