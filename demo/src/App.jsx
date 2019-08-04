@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import en from './i18n/en';
 import DrawerButton from '../../src/components/drawer/DrawerButton';
-import AppDrawer from './components/AppDrawer';
+import MainDrawer from './components/MainDrawer';
 
 class App extends Component {
 
@@ -35,7 +35,7 @@ class App extends Component {
                 <main>
                     <DrawerButton />
                     <Message id="brand" />
-                    <AppDrawer />
+                    <MainDrawer />
                 </main>
             </React.Fragment>
         );
