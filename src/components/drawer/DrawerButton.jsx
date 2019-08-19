@@ -17,7 +17,7 @@ const DrawerButton = ({ open }) => {
     const classes = useStyles();
     return (
         <IconButton
-            onClick={open}
+            onClick={() => open()}
             edge="start"
             className={classes.menuButton}
             color="inherit"

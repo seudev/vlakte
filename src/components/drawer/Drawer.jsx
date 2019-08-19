@@ -23,15 +23,15 @@ const Drawer = props => {
     return (
         <SwipeableDrawer
             open={props.state.isOpen}
-            onClose={close}
-            onOpen={open}
+            onClose={() => close()}
+            onOpen={() => open()}
             variant={variant}
         >
             <div
                 className={classes.drawer}
                 role="presentation"
-                onClick={close}
-                onKeyDown={close}
+                onClick={() => close()}
+                onKeyDown={() => close()}
             >
                 {children}
             </div>
