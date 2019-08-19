@@ -7,6 +7,7 @@ import I18n from '@seudev/x-i18n';
 import en from './i18n/en';
 import MainDrawer from './components/MainDrawer';
 import MainAppBar from './components/MainAppBar';
+import LoginForm from './components/LoginForm';
 
 export default props => (
     <React.Fragment>
@@ -20,8 +21,8 @@ export default props => (
         <CssBaseline />
         <MainAppBar />
         <MainDrawer />
-        <main>
-            <Message id="brand" />
+        <main style={{ padding: "20px" }}>
+            <LoginForm />
         </main>
     </React.Fragment>
 );

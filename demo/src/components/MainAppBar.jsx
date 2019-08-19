@@ -6,15 +6,10 @@ import DrawerButton from '../../../src/components/drawer/DrawerButton';
 import AppBar from '../../../src/components/app-bar/AppBar';
 import Brand from '../../../src/components/app-bar/Brand';
 import SearchBar from '../../../src/components/app-bar/SearchBar';
-
-const useStyles = makeStyles(theme => ({
-    nested: {
-        paddingLeft: theme.spacing(4),
-    },
-}));
+import UserAvatar from '../../../src/components/user/UserAvatar';
+import Grow from '../../../src/components/helpers/Grow';
 
 export default props => {
-    const classes = useStyles();
     const [value, setValue] = React.useState("");
 
     return (
@@ -25,6 +20,8 @@ export default props => {
                 console.log(value);
                 setValue(event.target.value);
             }} onEnter={event => console.log("ENTER=" + event.target.value)}/>
+            <Grow/>
+            <UserAvatar />
         </AppBar>
     );
 };

@@ -9,6 +9,11 @@ export default {
             searchBar: {
                 placeholder: "Search..."
             }
+        },
+        user: {
+            login: "Entrar",
+            logout: "Sair",
+            myAccount: "Minha Conta",
         }
     }
 };

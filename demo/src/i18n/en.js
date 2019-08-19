@@ -10,6 +10,11 @@ export default {
             searchBar: {
                 placeholder: "Search..."
             }
+        },
+        user: {
+            login: "Login",
+            logout: "Logout",
+            myAccount: "My Account",
         }
     }
 };

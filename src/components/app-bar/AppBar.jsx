@@ -9,6 +9,9 @@ const useStyles = makeStyles(theme => ({
     grow: {
         flexGrow: 1,
     },
+    toolbar: {
+        paddingRight: "10px"
+    } 
 }));
 
 const AppBar = props => {
@@ -18,7 +21,7 @@ const AppBar = props => {
     return (
         <div className={classes.grow}>
             <MuiAppBar position="fixed">
-                <Toolbar>
+                <Toolbar className={classes.toolbar}>
                     {children}
                 </Toolbar>
             </MuiAppBar>
