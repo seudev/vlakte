@@ -5,6 +5,11 @@ export default {
             en: { description: "English" },
             "pt-BR": { description: "Portuguese (Brazil)" }
         },
-        brand: "Vlakte"
+        brand: "Vlakte",
+        appBar: {
+            searchBar: {
+                placeholder: "Search..."
+            }
+        }
     }
 };

@@ -4,6 +4,11 @@ export default {
         langs: {
             en: { description: "Inglês" },
             "pt-BR": { description: "Português (Brasil)" }
+        },
+        appBar: {
+            searchBar: {
+                placeholder: "Search..."
+            }
         }
     }
 };

@@ -22,12 +22,13 @@
   "dependencies": {
     "@material-ui/core": "^4.3.1",
     "@material-ui/icons": "^4.2.1",
-    "@seudev/x-i18n": "0.0.3",
+    "@seudev/x-i18n": "0.0.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.1",
+    "redux-multi": "^0.1.12",
     "redux-starter-kit": "^0.6.3"
   },
   "peerDependencies": {},
