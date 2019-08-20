@@ -16,9 +16,8 @@ import { closeUserCard, logout } from './userActions';
 const useStyles = makeStyles(theme => ({
     card: {
         position: "absolute",
-        position: "absolute",
-        right: 0,
         top: "calc(100% + 8px)",
+        right: 0,
     },
     cardHeader: {
         padding: "8px 16px",
@@ -74,20 +73,11 @@ const UserCard = props => {
 };
 
 UserCard.propTypes = {
-    name: PropTypes.string,
-    nameLength: PropTypes.number,
-    src: PropTypes.string,
-    className: PropTypes.string,
-    variant: PropTypes.oneOf([
-        "avatar",
-        "orangeAvatar",
-        "purpleAvatar"
-    ])
+
 };
 
 UserCard.defaultProps = {
-    nameLength: 1,
-    variant: "avatar"
+
 };
 
 export default connect('user', { closeUserCard, logout }, UserCard);
