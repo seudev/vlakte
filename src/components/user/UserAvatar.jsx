@@ -9,7 +9,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { connect } from '../../Redux';
 import SimpleUserAvatar from './SimpleUserAvatar';
 import UserCard from './UserCard';
-import { openUserCard } from './userActions';
+import { toggleUserCard } from './userActions';
 
 const useStyles = makeStyles({
     root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 });
 
 const UserAvatar = props => {
-    const { className, state: { loggedIn, hasUserCardOpen, user: { name } }, openUserCard } = props;
+    const { className, state: { loggedIn, hasUserCardOpen, user: { name } }, toggleUserCard } = props;
 
     if (!loggedIn) {
         return false;
@@ -26,7 +26,7 @@ const UserAvatar = props => {
     const classes = useStyles();
 
     const avatar = (
-        <SimpleUserAvatar className={className} onClick={() => openUserCard()} />
+        <SimpleUserAvatar className={className} onClick={() => toggleUserCard()} />
     );
 
     const avatarWithTooltip = hasUserCardOpen ? false : (
@@ -53,4 +53,4 @@ UserAvatar.defaultProps = {
 
 };
 
-export default connect('user', { openUserCard }, UserAvatar);
+export default connect('user', { toggleUserCard }, UserAvatar);

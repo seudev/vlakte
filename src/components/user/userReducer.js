@@ -1,6 +1,6 @@
 import { createReducer } from 'redux-starter-kit';
 
-import { login, logout, openUserCard, closeUserCard } from './userActions';
+import { login, logout, toggleUserCard, closeUserCard } from './userActions';
 
 const INITIAL_STATE = {
     loggedIn: false,
@@ -24,6 +24,6 @@ export default createReducer(INITIAL_STATE, {
         return { loggedIn: true, hasUserCardOpen: false, user };
     },
     [logout]: () => ({ ...INITIAL_STATE }),
-    [openUserCard]: state => ({ ...state, hasUserCardOpen: true }),
+    [toggleUserCard]: state => ({ ...state, hasUserCardOpen: !state.hasUserCardOpen }),
     [closeUserCard]: state => ({ ...state, hasUserCardOpen: false }),
 });
