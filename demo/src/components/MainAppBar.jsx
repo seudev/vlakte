@@ -8,6 +8,8 @@ import Brand from '../../../src/components/app-bar/Brand';
 import SearchBar from '../../../src/components/app-bar/SearchBar';
 import UserAvatar from '../../../src/components/user/UserAvatar';
 import Grow from '../../../src/components/helpers/Grow';
+import NotificationButton from '../../../src/components/app-bar/notification/NotificationButton';
+
 
 export default props => {
     const [value, setValue] = React.useState("");
@@ -21,6 +23,7 @@ export default props => {
                 setValue(event.target.value);
             }} onEnter={event => console.log("ENTER=" + event.target.value)}/>
             <Grow/>
+            <NotificationButton/>
             <UserAvatar />
         </AppBar>
     );

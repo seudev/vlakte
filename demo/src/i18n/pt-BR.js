@@ -14,6 +14,10 @@ export default {
             login: "Entrar",
             logout: "Sair",
             myAccount: "Minha Conta",
+        },
+        notification: {
+            isEmpty: "Sem notificações",
+            clear: "Limpar"
         }
     }
 };

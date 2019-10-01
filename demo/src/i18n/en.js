@@ -15,6 +15,10 @@ export default {
             login: "Login",
             logout: "Logout",
             myAccount: "My Account",
+        },
+        notification: {
+            isEmpty: "Without notifications",
+            clear: "Clear"
         }
     }
 };
