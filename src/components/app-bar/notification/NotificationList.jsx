@@ -65,8 +65,8 @@ const NotificationList = props => {
         <ClickAwayListener onClickAway={() => closeNotificationList()}>
             <Card className={classes.card} elevation={4}>
                 <CardContent className={notifications.length > 0 ? classes.cardContent : classes.cardEmpty}>
-                    {notifications.map(({ id, title, description, image, route, link, actions }) => (
-                        <Notification key={id} title={title} description={description} image={image} route={route} link={link} actions={actions} />
+                    {notifications.map(({ id, title, description, image, route, externalLink, actions }) => (
+                        <Notification key={id} title={title} description={description} image={image} route={route} externalLink={externalLink} actions={actions} />
                     ))}
                     {notifications.length === 0 && (
                         <Typography component="p" color="textSecondary">

@@ -15,8 +15,7 @@ const INITIAL_STATE = {
         title: "Lizard",
         description: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
         image: { src: "https://images.pexels.com/photos/2253821/pexels-photo-2253821.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=72&w=72", alt: "alt test" },
-        route: { to: "" },
-        link: { href: "", target: "" },
+        route: `/route${i % 2 === 0 ? 1 : 2}`,
         actions: {
             "share": true,
             "learnMore": true,

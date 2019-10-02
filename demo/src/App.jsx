@@ -8,6 +8,7 @@ import en from './i18n/en';
 import MainDrawer from './components/MainDrawer';
 import MainAppBar from './components/MainAppBar';
 import LoginForm from './components/LoginForm';
+import { Switch, Route } from 'react-router-dom';
 
 export default props => (
     <React.Fragment>
@@ -23,6 +24,15 @@ export default props => (
         <MainDrawer />
         <main style={{ padding: "20px" }}>
             <LoginForm />
+
+            <Switch>
+                <Route path="/route1">
+                    <h1>Route 1</h1>
+                </Route>
+                <Route path="/route2">
+                    <h1>Route 2</h1>
+                </Route>
+            </Switch>
         </main>
     </React.Fragment>
 );
