@@ -8,6 +8,7 @@ import MainDrawer from './components/MainDrawer';
 import MainAppBar from './components/MainAppBar';
 import LoginForm from './components/LoginForm';
 import RouteContainer from '../../src/components/route/RouteContainer';
+import Breadcrumbs from '../../src/components/route/Breadcrumbs';
 import routes from './routes';
 
 export default props => (
@@ -24,6 +25,7 @@ export default props => (
         <MainDrawer />
         <main style={{ padding: "20px" }}>
             <LoginForm />
+            <Breadcrumbs routes={routes} componentProvider={path => import(`${path}`)} />
             <RouteContainer routes={routes} componentProvider={path => import(`${path}`)} suspenseFallback={<div>Loading...</div>} />
         </main>
     </React.Fragment>

@@ -25,7 +25,6 @@ const RouteContainer = ({ routes, componentProvider, suspenseFallback, redirectT
 
 RouteContainer.propTypes = {
     routes: PropTypes.arrayOf(PropTypes.shape({
-        title: PropTypes.string.isRequired,
         path: PropTypes.string.isRequired,
         exact: PropTypes.bool,
         strict: PropTypes.bool,
