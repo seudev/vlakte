@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { Message } from '@seudev/x-i18n';
 import { Helmet } from "react-helmet";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import I18n from '@seudev/x-i18n';
@@ -8,7 +7,8 @@ import en from './i18n/en';
 import MainDrawer from './components/MainDrawer';
 import MainAppBar from './components/MainAppBar';
 import LoginForm from './components/LoginForm';
-import { Switch, Route } from 'react-router-dom';
+import RouteContainer from '../../src/components/route/RouteContainer';
+import routes from './routes';
 
 export default props => (
     <React.Fragment>
@@ -24,15 +24,7 @@ export default props => (
         <MainDrawer />
         <main style={{ padding: "20px" }}>
             <LoginForm />
-
-            <Switch>
-                <Route path="/route1">
-                    <h1>Route 1</h1>
-                </Route>
-                <Route path="/route2">
-                    <h1>Route 2</h1>
-                </Route>
-            </Switch>
+            <RouteContainer routes={routes} componentProvider={path => import(`${path}`)} suspenseFallback={<div>Loading...</div>} />
         </main>
     </React.Fragment>
 );
