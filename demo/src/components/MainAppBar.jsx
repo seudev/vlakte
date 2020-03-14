@@ -9,21 +9,26 @@ import SearchBar from '../../../src/components/app-bar/SearchBar';
 import UserAvatar from '../../../src/components/user/UserAvatar';
 import Grow from '../../../src/components/helpers/Grow';
 import NotificationButton from '../../../src/components/app-bar/notification/NotificationButton';
-
+import LanguageDropdown from '../../../src/components/app-bar/LanguageDropdown';
 
 export default props => {
-    const [value, setValue] = React.useState("");
+    const [value, setValue] = React.useState('');
 
     return (
         <AppBar>
             <DrawerButton />
-            <Brand id="brand" />
-            <SearchBar value={value} onChange={event => {
-                console.log(value);
-                setValue(event.target.value);
-            }} onEnter={event => console.log("ENTER=" + event.target.value)}/>
-            <Grow/>
-            <NotificationButton/>
+            <Brand id='brand' />
+            <SearchBar
+                value={value}
+                onChange={event => {
+                    console.log(value);
+                    setValue(event.target.value);
+                }}
+                onEnter={event => console.log('ENTER=' + event.target.value)}
+            />
+            <Grow />
+            <LanguageDropdown />
+            <NotificationButton />
             <UserAvatar />
         </AppBar>
     );

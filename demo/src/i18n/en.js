@@ -1,24 +1,25 @@
 export default {
-    id: "en",
+    id: 'en',
     messages: {
         langs: {
-            en: { description: "English" },
-            "pt-BR": { description: "Portuguese (Brazil)" }
+            en: { description: 'English' },
+            'pt-BR': { description: 'Portuguese (Brazil)' }
         },
-        brand: "Vlakte",
+        changeLang: 'Change language',
+        brand: 'Vlakte',
         appBar: {
             searchBar: {
-                placeholder: "Search..."
+                placeholder: 'Search...'
             }
         },
         user: {
-            login: "Login",
-            logout: "Logout",
-            myAccount: "My Account",
+            login: 'Login',
+            logout: 'Logout',
+            myAccount: 'My Account'
         },
         notification: {
-            isEmpty: "Without notifications",
-            clear: "Clear"
+            isEmpty: 'Without notifications',
+            clear: 'Clear'
         }
     }
 };

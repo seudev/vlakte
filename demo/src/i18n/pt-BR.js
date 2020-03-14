@@ -1,23 +1,24 @@
 export default {
-    id: "pt-BR",
+    id: 'pt-BR',
     messages: {
         langs: {
-            en: { description: "Inglês" },
-            "pt-BR": { description: "Português (Brasil)" }
+            en: { description: 'Inglês' },
+            'pt-BR': { description: 'Português (Brasil)' }
         },
+        changeLang: 'Alterar idioma',
         appBar: {
             searchBar: {
-                placeholder: "Search..."
+                placeholder: 'Search...'
             }
         },
         user: {
-            login: "Entrar",
-            logout: "Sair",
-            myAccount: "Minha Conta",
+            login: 'Entrar',
+            logout: 'Sair',
+            myAccount: 'Minha Conta'
         },
         notification: {
-            isEmpty: "Sem notificações",
-            clear: "Limpar"
+            isEmpty: 'Sem notificações',
+            clear: 'Limpar'
         }
     }
 };
