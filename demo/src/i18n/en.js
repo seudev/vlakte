@@ -20,6 +20,18 @@ export default {
         notification: {
             isEmpty: 'Without notifications',
             clear: 'Clear'
+        },
+        forms: {
+            example: {
+                fields: {
+                    language: { label: 'Language', placeholder: 'Select' }
+                },
+                actions: {
+                    create: { submit: 'Save', reset: 'Clear' },
+                    update: { submit: 'Update', reset: 'Clear' },
+                    delete: { submit: 'Delete' }
+                }
+            }
         }
     }
 };

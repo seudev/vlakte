@@ -19,6 +19,18 @@ export default {
         notification: {
             isEmpty: 'Sem notificações',
             clear: 'Limpar'
+        },
+        forms: {
+            example: {
+                fields: {
+                    language: { label: 'Linguagem', placeholder: 'Selecione' }
+                },
+                actions: {
+                    create: { submit: 'Salvar', reset: 'Limpar' },
+                    update: { submit: 'Atualizar', reset: 'Limpar' },
+                    delete: { submit: 'Deletar' }
+                }
+            }
         }
     }
 };
